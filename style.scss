@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e8f0fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0f1c52;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 80px 79px 84px 80px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 22px;
+    width: calc(100% - 64px);
+    background-color: #cbc5f2;
+    bottom: -22px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  width: 100%;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.card-mid {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 25px;
+  margin-bottom: 73px;
+
+  .avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 91px;
+    height: 91px;
+    border-radius: 50%;
+    background-color: #ebbbe4;
+    color: #c41dac;
+  }
+
+  .profile-name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    margin-top: 30px;
+  }
+
+  button {
+    background: transparent;
+    padding: 21px 55px 19px 56px;
+    border: 2px solid #0f1c52;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.card-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    list-style-type: none;
+    width: 617px;
+    border-top: 1px solid #e8f0fc;
+    border-bottom: 1px solid #e8f0fc;
+
+    li {
+      padding: 27px 23px;
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      &.active {
+        background-color: #dfdcf9;
+      }
+    }
+  }
+}
